@@ -1629,6 +1629,31 @@ html[dir='rtl'] .sidebar::-webkit-scrollbar-thumb {
     right: 0;
   }
 }
+
+/* Mobile */
+
+@media (max-width: 440px) {
+  .maintenance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .btn-long-with-icon {
+    position: relative;
+    width: 185px;
+    margin-top: 10px;
+  }
+
+  .alert {
+    width: 94%;
+  }
+
+  .trial-alert {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   html[dir='rtl'] .toggle-sidebar #main,
   html[dir='rtl'] .toggle-sidebar #footer {

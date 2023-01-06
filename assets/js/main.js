@@ -344,17 +344,15 @@ document.querySelector('#language-icon').addEventListener('click', () => {
     document.querySelector('#language-dropdown').style.transform =
       'translate(138.671875px, 48px)'
   }
+  if(window.matchMedia("(max-width: 440px)")){
+    document.querySelector('#language-dropdown').style.transform =
+      'translate(5.672px, 48px)'
+  }
 })
 
-// var threeDotsArabic = document.getElementsByClassName('three-dots-arabic')
-
-// for (let i = 0; i < threeDotsArabic.length; i++) {
-//   console.log(threeDotsArabic[i]);
-//   threeDotsArabic[i].addEventListener('click', () => {
-//     var lang = localStorage.getItem('lang') || 'ar'
-//     if (lang == 'ar') {
-//       threeDotsArabic[i].nextElementSibling.style.transform =
-//         'translate(125.672px, 24px)'
-//     }
-//   })
-// }
+window.addEventListener('click', function(e){   
+  if (document.getElementById('sidebar').contains(e.target) || document.querySelector(".toggle-sidebar-btn").contains(e.target)){
+  } else{
+    document.querySelector("body").classList.remove("toggle-sidebar")
+  }
+});
