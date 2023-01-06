@@ -41,10 +41,8 @@
   </div>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
-
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.jpg" alt="">
         <span class="d-none d-lg-block">HelpTK</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn" style="margin-top: 13px;"></i>
@@ -134,23 +132,29 @@
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
-
+    <div class="logo go-to-shop">
+      <img src="assets/img/logo.jpg" alt="">
+      <span class="badge bg-success">
+        الإنتقال للمتجر
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </span>
+    </div>
     <ul class="sidebar-nav" id="sidebar-nav">
-
       <li class="nav-item">
         <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-grid" style="font-size: 18px;"></i>
           <span>لوحة التحكم</span>
         </a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#storage-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>المخزون</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-warehouse"></i>
+          <span>المخزون</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="storage-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="category.html">
               <i class="bi bi-circle"></i><span>التصنيفات</span>
             </a>
           </li>
@@ -174,7 +178,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#purchases-and-expenses-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>المشتريات و المصروفات</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-wallet"></i><span>المشتريات و المصروفات</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="purchases-and-expenses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -202,7 +206,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#clients-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>العملاء</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-users"></i><span>العملاء</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="clients-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -220,7 +224,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#suppliers-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bar-chart"></i><span>الموردين</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-users"></i><span>الموردين</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="suppliers-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -243,7 +247,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#invoice-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>فاتورة</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-file-invoice-dollar"></i><span>فاتورة</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="invoice-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -281,7 +285,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#reports-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>التقارير</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-file-signature" style="right: -5px;"></i><span>التقارير</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -329,7 +333,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#order-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>الطلب</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-handshake-simple"></i><span>الطلب</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="order-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -347,7 +351,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#user-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>المستخدم</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-user"></i><span>المستخدم</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -370,7 +374,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#setting-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>الإعدادات</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa-solid fa-gear"></i><span>الإعدادات</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -472,12 +476,12 @@
             </div>
 
             <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
+              <div class="card info-card revenue-card">
                 <h5 class="card-title">المبيعات <span>| اليوم</span></h5>
                 <div class="card-body">
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-cart"></i>
+                      <i class="fa-solid fa-dollar-sign"></i>
                     </div>
                     <div class="ps-3">
                       <h6>145</h6>
@@ -512,8 +516,8 @@
             </div>
 
             <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card customers-card">
-                <h5 class="card-title">Customers <span>| هذه السنة</span></h5>
+              <div class="card info-card sales-card">
+                <h5 class="card-title">العملاء <span>| هذه السنة</span></h5>
                 <div class="card-body">
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -532,12 +536,12 @@
             </div>
 
             <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card customers-card">
-                <h5 class="card-title">Customers <span>| هذه السنة</span></h5>
+              <div class="card info-card revenue-card">
+                <h5 class="card-title">السندات <span>| هذه السنة</span></h5>
                 <div class="card-body">
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
+                      <i class="fa-solid fa-file-contract"></i>
                     </div>
                     <div class="ps-3">
                       <h6>1244</h6>
@@ -553,11 +557,11 @@
 
             <div class="col-xxl-4 col-xl-12">
               <div class="card info-card customers-card">
-                <h5 class="card-title">Customers <span>| هذه السنة</span></h5>
+                <h5 class="card-title">الطلبات <span>| هذه السنة</span></h5>
                 <div class="card-body">
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
+                      <i class="fa-regular fa-paper-plane"></i>
                     </div>
                     <div class="ps-3">
                       <h6>1244</h6>
