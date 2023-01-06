@@ -368,7 +368,11 @@ window.addEventListener("click", function (e) {
   }
 });
 
-window.onresize = () => {
+window.onload = getBottomNav();
+window.onresize = getBottomNav();
+
+
+function getBottomNav() {
   if(window.matchMedia("(max-width: 440px)").matches){
     document.querySelector("#bottomNav").style.display = "";
   }else{
