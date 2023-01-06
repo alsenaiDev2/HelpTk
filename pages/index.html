@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Help TK</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/logo.jpg" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="https://kit.fontawesome.com/2c5fd04036.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link id="style" href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="splash" id="splash">
+    <span class = "splash-header">
+      <img src="../assets/img/logo.jpg" />
+    </span>
+  </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.jpg" alt="">
+        <span class="d-none d-lg-block">HelpTK</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <div class="alert alert-primary alert-dismissible fade show trial-alert" role="alert">
+        نسخه تجريبية: 12 يوم
+      </div>
+    </div>
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown" id="language-icon">
+            <i class="fa-solid fa-earth-asia"></i>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages" id="language-dropdown">
+            <li class="dropdown-header">
+              Choose your language
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item" id="ar">
+              Arabic
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item" id="en">
+              English
+            </li>
+          </ul><!-- End Language Dropdown Items -->
+
+        </li> 
+        
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>لوحة التحكم</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#storage-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>المخزون</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="storage-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle"></i><span>التصنيفات</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-accordion.html">
+              <i class="bi bi-circle"></i><span>الأصناف الرئيسية</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-badges.html">
+              <i class="bi bi-circle"></i><span>التحويل بين المستودعات</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-breadcrumbs.html">
+              <i class="bi bi-circle"></i><span>تقرير التحويل بين المستودعات</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#purchases-and-expenses-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>المشتريات و المصروفات</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="purchases-and-expenses-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="forms-elements.html">
+              <i class="bi bi-circle"></i><span>فاتورة مشتريات</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>مرتجع مشتريات</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-editors.html">
+              <i class="bi bi-circle"></i><span>فاتورة مصروفات</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span> تقرير المشتريات والمصروفات</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#clients-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>العملاء</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="clients-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="tables-general.html">
+              <i class="bi bi-circle"></i><span>العملاء</span>
+            </a>
+          </li>
+          <li>
+            <a href="tables-data.html">
+              <i class="bi bi-circle"></i><span>حسابات العملاء</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#suppliers-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>الموردين</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="suppliers-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="charts-chartjs.html">
+              <i class="bi bi-circle"></i><span>الموردين</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-apexcharts.html">
+              <i class="bi bi-circle"></i><span>حسابات الموردين</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-echarts.html">
+              <i class="bi bi-circle"></i><span>قائمة الموردين</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#invoice-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>فاتورة</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="invoice-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>فاتورة مبيعات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>فاتورة مشتريات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>فاتورة مصروفات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>مرتجع مبيعات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>مرتجع مشتريات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>سندات</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#reports-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>التقارير</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>تقرير المبيعات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>تقرير مرتجع المبيعات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>تقرير المشتريات و المصروفات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>تقرير مرتجع المشتريات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>تقرير حركة الأصناف</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>تقرير إجمالي الفتره</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>تقرير السندات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>الحسابات البنيكة</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#order-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>الطلب</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="order-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>إدارة الطلبات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>إدارة التسليم</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#user-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>المستخدم</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>قائمة المستخدمين</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>الصلاحيات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>عمليات المستخدمين</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#setting-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>الإعدادات</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>القيمة المضافة</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>الإشتراك</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>هيئة الزكاة</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>القيمة المضافة توصيل</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>وحدات الأصناف</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>أنواع المصروفات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>الفروع</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>المستودعات</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>الضبط</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>الدعم الفني</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="row">
+        <div class="alert alert-danger alert-dismissible fade show maintenance" role="alert">
+          <span>
+            <i class="bi bi-exclamation-octagon me-1"></i>
+            المتجر في وضع الصيانة
+          </span>
+          <button type="button" class="btn btn-danger btn-long-with-icon">
+            <span>إلغاء وضع الصيانة</span>
+            <i class="fa-solid fa-eye-slash"></i>
+          </button>
+        </div>
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <h5 class="card-title">الأصناف الرئيسية <span>| اليوم</span></h5>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                      <div class="percent">
+                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-success small pt-1 fw-bold">12%</span> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <h5 class="card-title">المبيعات <span>| اليوم</span></h5>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                      <div class="percent">
+                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-success small pt-1 fw-bold">12%</span> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-12">
+              <div class="card info-card customers-card">
+                <h5 class="card-title">الزيارات <span>| هذه السنة</span></h5>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1244</h6>
+                      <div class="percent">
+                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-success small pt-1 fw-bold">12%</span> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-12">
+              <div class="card info-card customers-card">
+                <h5 class="card-title">Customers <span>| هذه السنة</span></h5>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1244</h6>
+                      <div class="percent">
+                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-success small pt-1 fw-bold">12%</span> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-12">
+              <div class="card info-card customers-card">
+                <h5 class="card-title">Customers <span>| هذه السنة</span></h5>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1244</h6>
+                      <div class="percent">
+                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-success small pt-1 fw-bold">12%</span> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-xl-12">
+              <div class="card info-card customers-card">
+                <h5 class="card-title">Customers <span>| هذه السنة</span></h5>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1244</h6>
+                      <div class="percent">
+                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-success small pt-1 fw-bold">12%</span> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                
+
+                <h5 class="card-title">أحدث الطلبات <span>| اليوم</span></h5>
+                <hr>
+                <div class="card-body">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">رقم الطلب</th>
+                        <th scope="col">العميل</th>
+                        <th scope="col">المنتج</th>
+                        <th scope="col">السعر</th>
+                        <th scope="col">حالة الطلب</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">#2457</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>64 ريال</td>
+                        <td><span class="badge bg-success">موافقه</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2147</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>47 ريال</td>
+                        <td><span class="badge bg-warning">إنتظار</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2049</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>147 ريال</td>
+                        <td><span class="badge bg-success">موافقه</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>67 ريال</td>
+                        <td><span class="badge bg-danger">مرفوض</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>165 ريال</td>
+                        <td><span class="badge bg-success">موافقه</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card" style="min-height: 370px;">
+            <h5 class="card-title">التنبيهات <span>| اليوم</span></h5>
+            <hr>
+            <div class="card-body pb-0">
+              <div class="news">
+                
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-envelope"></i>
+                  <h4>
+                    <a href="#">عنوان التنبيه</a>
+                    <span class="time">02:20 PM</span>
+                  </h4>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-envelope"></i>
+                  <h4>
+                    <a href="#">عنوان التنبيه</a>
+                    <span class="time">02:20 PM</span>
+                  </h4>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-envelope"></i>
+                  <h4>
+                    <a href="#">عنوان التنبيه</a>
+                    <span class="time">02:20 PM</span>
+                  </h4>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-envelope"></i>
+                  <h4>
+                    <a href="#">عنوان التنبيه</a>
+                    <span class="time">02:20 PM</span>
+                  </h4>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-envelope"></i>
+                  <h4>
+                    <a href="#">عنوان التنبيه</a>
+                    <span class="time">02:20 PM</span>
+                  </h4>
+                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card" style="min-height: 370px;">
+            <h5 class="card-title">منتجات انتهت او قاربت على الإنتهاء</h5>
+            <hr>
+            <div class="card-body pb-0">
+
+              <div class="news">
+
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-warehouse"></i>
+                  <h4>
+                    <a href="#">اسم المنتج</a>
+                    <span class="time">اسم المخزن</span>
+                  </h4>
+                  <p>هذا المنتج نفد من المخزن</p>
+                </div>
+
+                <div class="post-item clearfix">
+                  <!-- <img src="../assets/img/news-1.jpg" alt=""> -->
+                  <i class="fa-solid fa-warehouse"></i>
+                  <h4>
+                    <a href="#">اسم المنتج</a>
+                    <span class="time">اسم المخزن</span>
+                  </h4>
+                  <p>هذا المنتج قارب من النفاد باقي 3 حبات فقط</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.min.js"></script>
+  <script src="../assets/vendor/echarts/echarts.min.js"></script>
+  <script src="../assets/vendor/quill/quill.min.js"></script>
+  <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/language.js"></script>
+
+</body>
+
+</html>
