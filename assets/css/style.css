@@ -1630,6 +1630,10 @@ html[dir='rtl'] .sidebar::-webkit-scrollbar-thumb {
   }
 }
 
+.trial-alert-mobile {
+  display: none;
+}
+
 /* Mobile */
 
 @media (max-width: 440px) {
@@ -1648,6 +1652,10 @@ html[dir='rtl'] .sidebar::-webkit-scrollbar-thumb {
 
   .alert {
     width: 94%;
+  }
+  
+  .trial-alert-mobile {
+     display: "";
   }
 
   .trial-alert {
