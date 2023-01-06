@@ -679,10 +679,8 @@ html[dir='ltr'] .sidebar-nav .nav-link {
 }
 html[dir='ltr'] .sidebar-nav .nav-link i {
   font-size: 16px;
-  margin-left: 10px;
-  top: -3px;
-  position: relative;
-  right: -1px;
+  margin-right: 10px;
+  color: var(--secondary-color);
 }
 html[dir='ltr'] .sidebar-nav .nav-link.collapsed {
   color: var(--primary-color);
@@ -1730,9 +1728,7 @@ html[dir='rtl'] .sidebar-nav .nav-link {
 html[dir='rtl'] .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-left: 10px;
-  top: -3px;
-  position: relative;
-  right: -1px;
+  color: var(--secondary-color);
 }
 html[dir='rtl'] .sidebar-nav .nav-link.collapsed {
   color: var(--primary-color);
