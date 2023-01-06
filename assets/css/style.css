@@ -1684,6 +1684,53 @@ html[dir='rtl'] .sidebar::-webkit-scrollbar-thumb {
   .trial-alert {
     display: none;
   }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: start;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
 }
 @media (min-width: 1200px) {
   html[dir='rtl'] .toggle-sidebar #main,
@@ -2253,4 +2300,21 @@ html[dir='rtl'] .bi-chevron-down::before {
 
 .splash .splash-header img {
   height: 250px;
+}
+
+tbody {
+  display: block;
+  height: 290px;
+  overflow: auto;
+}
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+thead {
+  width: calc(
+    100% - 1em
+  ); /* scrollbar is average 1em/16px width, remove it from thead width */
 }
