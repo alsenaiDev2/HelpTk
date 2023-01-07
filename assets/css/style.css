@@ -1735,6 +1735,24 @@ html[dir='rtl'] .sidebar::-webkit-scrollbar-thumb {
   .info-card {
     margin-bottom: 15px !important;
   }
+
+  .search-table {
+    flex-direction: column !important;
+  }
+
+  .search-table input {
+    margin-top: 10px !important;
+    width: 300px !important;
+  }
+
+  .card-footer {
+    flex-direction: column-reverse !important;
+  }
+
+  .select-number-items {
+    width: 242px !important;
+    margin-bottom: 10px;
+  }
 }
 @media (min-width: 1200px) {
   html[dir='rtl'] .toggle-sidebar #main,
@@ -2321,4 +2339,62 @@ thead {
   width: calc(
     100% - 1em
   ); /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+/* Table Pagination design */
+
+.search-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.search-table input {
+  width: 300px;
+}
+
+.select-number-items {
+  width: 70px;
+}
+
+ul.pagination {
+  margin-bottom: 0;
+  padding-right: 0;
+}
+
+ul.pagination li {
+  cursor: pointer;
+}
+
+ul.pagination li.disabled {
+  cursor: not-allowed;
+}
+
+.pagination .page-item .page-link {
+  border: none;
+  border-radius: 12px;
+  margin: 0px 2px;
+  padding: 5px 19px;
+  padding-top: 11px;
+  font-size: 18px;
+}
+
+.pagination .page-link i {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+.pagination .page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }

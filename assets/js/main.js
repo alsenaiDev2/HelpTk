@@ -367,15 +367,3 @@ window.addEventListener("click", function (e) {
     document.querySelector("body").classList.remove("toggle-sidebar");
   }
 });
-
-window.onload = getBottomNav();
-window.onresize = getBottomNav();
-
-
-function getBottomNav() {
-  if(window.matchMedia("(max-width: 440px)").matches){
-    document.querySelector("#bottomNav").style.display = "";
-  }else{
-    document.querySelector("#bottomNav").style.display = "none";
-  }
-}

@@ -465,7 +465,7 @@
                     <div class="ps-3">
                       <h6>145</h6>
                       <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-muted small pt-2 ps-1">زيادة</span>
                         <span class="text-success small pt-1 fw-bold">12%</span> 
                       </div>
                     </div>
@@ -485,7 +485,7 @@
                     <div class="ps-3">
                       <h6>145</h6>
                       <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-muted small pt-2 ps-1">زيادة</span>
                         <span class="text-success small pt-1 fw-bold">12%</span> 
                       </div>
                     </div>
@@ -505,7 +505,7 @@
                     <div class="ps-3">
                       <h6>1244</h6>
                       <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-muted small pt-2 ps-1">زيادة</span>
                         <span class="text-success small pt-1 fw-bold">12%</span> 
                       </div>
                     </div>
@@ -525,7 +525,7 @@
                     <div class="ps-3">
                       <h6>1244</h6>
                       <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-muted small pt-2 ps-1">زيادة</span>
                         <span class="text-success small pt-1 fw-bold">12%</span> 
                       </div>
                     </div>
@@ -545,7 +545,7 @@
                     <div class="ps-3">
                       <h6>1244</h6>
                       <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-muted small pt-2 ps-1">زيادة</span>
                         <span class="text-success small pt-1 fw-bold">12%</span> 
                       </div>
                     </div>
@@ -565,7 +565,7 @@
                     <div class="ps-3">
                       <h6>1244</h6>
                       <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زياده</span>
+                        <span class="text-muted small pt-2 ps-1">زيادة</span>
                         <span class="text-success small pt-1 fw-bold">12%</span> 
                       </div>
                     </div>
@@ -577,9 +577,12 @@
             <!-- Recent Sales -->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
-                <h5 class="card-title">أحدث الطلبات <span>| اليوم</span></h5>
+                <h5 class="card-title search-table">
+                  <div>أحدث الطلبات <span>| اليوم</span></div>
+                  <input type="text" class="form-control" placeholder="البحث..." id="mySearchInput">
+                </h5>
                 <hr>
-                <div class="card-body" style="overflow-y: hidden;">
+                <div class="card-body" style="overflow-y: hidden;max-height: 310px;">
                   <table class="table table-borderless">
                     <thead>
                       <tr>
@@ -590,7 +593,7 @@
                         <th scope="col">حالة الطلب</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody style="padding-bottom: 25px;">
                       <tr>
                         <th scope="row"><a href="#">#2457</a></th>
                         <td>أسم العميل</td>
@@ -647,11 +650,61 @@
                         <td>165 ريال</td>
                         <td><span class="badge bg-success">موافقه</span></td>
                       </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>165 ريال</td>
+                        <td><span class="badge bg-success">موافقه</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>165 ريال</td>
+                        <td><span class="badge bg-success">موافقه</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>أسم العميل</td>
+                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
+                        <td>165 ريال</td>
+                        <td><span class="badge bg-warning">إنتظار</span></td>
+                      </tr>
                     </tbody>
                   </table>
-
                 </div>
-
+                <div class="card-footer">
+                  <div class="pagination-side">
+                    <nav aria-label="...">
+                      <ul class="pagination">
+                        <li class="page-item disabled">
+                          <a class="page-link"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link">1</a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                          <a class="page-link">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link"><i class="fa-solid fa-circle-chevron-left"></i></a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="itemsCount-side">
+                    <select class="form-select select-number-items" aria-label="Default select example">
+                      <option value="5">5</option>
+                      <option value="10" selected="">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -768,6 +821,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/language.js"></script>
+  <script src="assets/js/table.js"></script>
 
 </body>
 
