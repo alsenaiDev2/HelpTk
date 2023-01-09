@@ -435,377 +435,205 @@
   <main id="main" class="main">
     <section class="section dashboard">
       <div class="row">
-        <div class="alert alert-warning alert-dismissible fade show maintenance trial-alert-mobile" role="alert">
-          <span>
-            نسخه تجريبية: 12 يوم
-          </span>
-        </div>
-        <div class="alert alert-danger alert-dismissible fade show maintenance" role="alert">
-          <span>
-            <i class="bi bi-exclamation-octagon me-1"></i>
-            المتجر في وضع الصيانة
-          </span>
-          <button type="button" class="btn btn-danger btn-long-with-icon">
-            <span>إلغاء وضع الصيانة</span>
-            <i class="fa-solid fa-eye-slash"></i>
-          </button>
-        </div>
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
-
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <h5 class="card-title">الأصناف الرئيسية <span>| اليوم</span></h5>
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-cart"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>145</h6>
-                      <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زيادة</span>
-                        <span class="text-success small pt-1 fw-bold">12%</span> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="col-12">
+          <div class="card recent-sales overflow-auto">
+            <h5 class="card-title search-table">
+              <div>التصنيفات</div>
+              <div class="filter-side">
+                <input type="text" class="form-control" placeholder="البحث...">
+                <span class="badge bg-success" style="width: 175px;font-size: 14px !important;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  إضافة تصنيف جديد
+                  <i class="fa-solid fa-filter"></i>
+                </span>
+                <span class="badge bg-success" style="width: 90px;font-size: 14px !important;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                  تصفية
+                  <i class="fa-solid fa-filter"></i>
+                </span>
+                <span class="badge bg-success" style="width: 175px;font-size: 14px !important;" onclick="ExportToExcel('categoryTable', 'xlsx')">
+                  استخراج لملف إكسل
+                  <i class="fa-regular fa-file-excel"></i>
+                </span>
               </div>
+            </h5>
+            <hr>
+            <div class="card-body" style="max-height: 100%;">
+              <table class="table table-borderless" id="categoryTable">
+                <thead>
+                  <tr>
+                    <th scope="col">كود التصنيف</th>
+                    <th scope="col">التصنيف بالعربي</th>
+                    <th scope="col">التصنيف بالإنجليزي</th>
+                    <th scope="col">تعديل</th>
+                    <th scope="col">حذف</th>
+                  </tr>
+                </thead>
+                <tbody style="height: 100%;">
+                  <tr>
+                    <th scope="row"><a href="#">#2457</a></th>
+                    <td>أسم التصنيف بالعربي</td>
+                    <td><a href="#" class="text-primary">أسم التصنيف بالإنجليزي</a></td>
+                    <td>
+                      <button type="button" class="btn btn-secondary btn-icon">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-icon">
+                        <i class="fa-regular fa-trash-can"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="#">#2147</a></th>
+                    <td>أسم التصنيف بالعربي</td>
+                    <td><a href="#" class="text-primary">أسم التصنيف بالإنجليزي</a></td>
+                    <td>
+                      <button type="button" class="btn btn-secondary btn-icon">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-icon">
+                        <i class="fa-regular fa-trash-can"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="#">#2049</a></th>
+                    <td>أسم التصنيف بالعربي</td>
+                    <td><a href="#" class="text-primary">أسم التصنيف بالإنجليزي</a></td>
+                    <td>
+                      <button type="button" class="btn btn-secondary btn-icon">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-icon">
+                        <i class="fa-regular fa-trash-can"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card revenue-card">
-                <h5 class="card-title">المبيعات <span>| اليوم</span></h5>
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="fa-solid fa-dollar-sign"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>145</h6>
-                      <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زيادة</span>
-                        <span class="text-success small pt-1 fw-bold">12%</span> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="card-footer">
+              <div class="pagination-side">
+                <nav aria-label="...">
+                  <ul class="pagination">
+                    <li class="page-item disabled">
+                      <a class="page-link"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link">1</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link"><i class="fa-solid fa-circle-chevron-left"></i></a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-            </div>
-
-            <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card customers-card">
-                <h5 class="card-title">الزيارات <span>| هذه السنة</span></h5>
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>1244</h6>
-                      <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زيادة</span>
-                        <span class="text-success small pt-1 fw-bold">12%</span> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card sales-card">
-                <h5 class="card-title">العملاء <span>| هذه السنة</span></h5>
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>1244</h6>
-                      <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زيادة</span>
-                        <span class="text-success small pt-1 fw-bold">12%</span> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card revenue-card">
-                <h5 class="card-title">السندات <span>| هذه السنة</span></h5>
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="fa-solid fa-file-contract"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>1244</h6>
-                      <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زيادة</span>
-                        <span class="text-success small pt-1 fw-bold">12%</span> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card customers-card">
-                <h5 class="card-title">الطلبات <span>| هذه السنة</span></h5>
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="fa-regular fa-paper-plane"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>1244</h6>
-                      <div class="percent">
-                        <span class="text-muted small pt-2 ps-1">زيادة</span>
-                        <span class="text-success small pt-1 fw-bold">12%</span> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div class="card recent-sales overflow-auto">
-                <h5 class="card-title search-table">
-                  <div>أحدث الطلبات <span>| اليوم</span></div>
-                  <input type="text" class="form-control" placeholder="البحث..." id="mySearchInput">
-                </h5>
-                <hr>
-                <div class="card-body" style="overflow-y: hidden;max-height: 310px;">
-                  <table class="table table-borderless">
-                    <thead>
-                      <tr>
-                        <th scope="col">رقم الطلب</th>
-                        <th scope="col">العميل</th>
-                        <th scope="col">المنتج</th>
-                        <th scope="col">السعر</th>
-                        <th scope="col">حالة الطلب</th>
-                      </tr>
-                    </thead>
-                    <tbody style="padding-bottom: 25px;">
-                      <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>64 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>47 ريال</td>
-                        <td><span class="badge bg-warning">إنتظار</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>147 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>67 ريال</td>
-                        <td><span class="badge bg-danger">مرفوض</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-success">موافقه</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>أسم العميل</td>
-                        <td><a href="#" class="text-primary">أسم المنتج</a></td>
-                        <td>165 ريال</td>
-                        <td><span class="badge bg-warning">إنتظار</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-footer">
-                  <div class="pagination-side">
-                    <nav aria-label="...">
-                      <ul class="pagination">
-                        <li class="page-item disabled">
-                          <a class="page-link"><i class="fa-solid fa-circle-chevron-right"></i></a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link">1</a>
-                        </li>
-                        <li class="page-item active" aria-current="page">
-                          <a class="page-link">2</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link">3</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link"><i class="fa-solid fa-circle-chevron-left"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div class="itemsCount-side">
-                    <select class="form-select select-number-items" aria-label="Default select example">
-                      <option value="5">5</option>
-                      <option value="10" selected="">10</option>
-                      <option value="15">15</option>
-                      <option value="20">20</option>
-                    </select>
-                  </div>
-                </div>
+              <div class="itemsCount-side">
+                <select class="form-select select-number-items" aria-label="Default select example">
+                  <option value="5">5</option>
+                  <option value="10" selected="">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4">
-          <div class="card" style="min-height: 370px;">
-            <h5 class="card-title">التنبيهات <span>| اليوم</span></h5>
-            <hr>
-            <div class="card-body pb-0">
-              <div class="news">
-                
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>
-                    <a href="#">عنوان التنبيه</a>
-                    <span class="time">02:20 PM</span>
-                  </h4>
-                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-                </div>
-
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>
-                    <a href="#">عنوان التنبيه</a>
-                    <span class="time">02:20 PM</span>
-                  </h4>
-                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-                </div>
-
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>
-                    <a href="#">عنوان التنبيه</a>
-                    <span class="time">02:20 PM</span>
-                  </h4>
-                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-                </div>
-
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>
-                    <a href="#">عنوان التنبيه</a>
-                    <span class="time">02:20 PM</span>
-                  </h4>
-                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-                </div>
-
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>
-                    <a href="#">عنوان التنبيه</a>
-                    <span class="time">02:20 PM</span>
-                  </h4>
-                  <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-                </div>
-
-              </div>
-            </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">تصفية التصنيفات</h5>
           </div>
-          <div class="card" style="min-height: 370px;">
-            <h5 class="card-title">منتجات انتهت او قاربت على الإنتهاء</h5>
-            <hr>
-            <div class="card-body pb-0">
-
-              <div class="news">
-
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-warehouse"></i>
-                  <h4>
-                    <a href="#">اسم المنتج</a>
-                    <span class="time">اسم المخزن</span>
-                  </h4>
-                  <p>هذا المنتج نفد من المخزن</p>
-                </div>
-
-                <div class="post-item clearfix">
-                  <!-- <img src="assets/img/news-1.jpg" alt=""> -->
-                  <i class="fa-solid fa-warehouse"></i>
-                  <h4>
-                    <a href="#">اسم المنتج</a>
-                    <span class="time">اسم المخزن</span>
-                  </h4>
-                  <p>هذا المنتج قارب من النفاد باقي 3 حبات فقط</p>
-                </div>
-
+          <div class="offcanvas-body">
+            <div class="filter-body">
+              <div class="filter-type">
+                <span class="filter-name">الفرع</span>
+                <select class="form-select">
+                  <option value="">الفرع 1</option>
+                  <option value="">الفرع 2</option>
+                  <option value="">الفرع 3</option>
+                  <option value="">الفرع 4</option>
+                  <option value="">الفرع 5</option>
+                </select>
+              </div>
+              <div class="filter-type">
+                <span class="filter-name">التصنيف</span>
+                <select class="form-select">
+                  <option value="">التصنيف 1</option>
+                  <option value="">التصنيف 2</option>
+                  <option value="">التصنيف 3</option>
+                  <option value="">التصنيف 4</option>
+                  <option value="">التصنيف 5</option>
+                </select>
+              </div>
+              <div class="filter-type">
+                <span class="filter-name">الكود</span>
+                <input type="number" class="form-control">
+              </div>
+              <div class="filter-type">
+                <button class="btn btn-primary" style="width: -webkit-fill-available;">
+                  تصفية
+                  <i class="fa-solid fa-filter"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">إضافة تصنيف جديد</h5>
+            </div>
+            <div class="modal-body">
+              <div class="add-category-model">
+                <div class="add-category-section">
+                  <span class="">التصنيف بالعربي</span>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="add-category-section">
+                  <span class="">التصنيف بالإنجليزي</span>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="add-category-section">
+                  <span class="">الفرع</span>
+                  <select class="form-select">
+                    <option value="">الفرع 1</option>
+                    <option value="">الفرع 2</option>
+                    <option value="">الفرع 3</option>
+                    <option value="">الفرع 4</option>
+                    <option value="">الفرع 5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer" style="display: flex; flex-direction: column;">
+              <button type="button" class="btn btn-primary" style="width: -webkit-fill-available;">حفظ</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: -webkit-fill-available;">إلغاء</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
     </section>
   </main>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+      
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -818,9 +646,11 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/language.js"></script>
   <script src="assets/js/table.js"></script>
+  <script src="assets/js/Export.js"></script>
 
 </body>
 
